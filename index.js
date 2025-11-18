@@ -8,13 +8,15 @@ for (let row = 0; row < 16; row++) {
 
     for (let col = 0; col < 16; col++) {
         const tc = document.createElement("tc");
-        tc.style.width = "30px";
-        tc.style.height = "30px";
-        tc.style.border = "1px solid black";
+        tc.addEventListener('mouseenter', function() {
+            tc.style.backgroundColor = 'red';
+        });
         tr.appendChild(tc);
     }
 
     table.appendChild(tr);
 }
+
+
 
 container.appendChild(table);
